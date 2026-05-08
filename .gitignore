@@ -1,0 +1,4 @@
+.zsh_history
+.zcompdump*
+nvim/.config/nvim/swap/
+nvim/.config/nvim/undo/
