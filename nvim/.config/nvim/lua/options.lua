@@ -9,5 +9,3 @@ require "nvchad.options"
 vim.diagnostic.config({
   float = { border = "rounded" },
 })
-
-vim.opt.termguicolors = true

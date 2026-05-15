@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+info() { echo ">> $1";}
+error() { echo ">> ERROR: $1"; exit;}
+
+info "Preparing tools..."
+sudo pacman -Syu
+sudo pacman -S --needed --noconfirm base-devel git
+
+TMP_DIR="$PWD/tmp"
+
+mkdir $TMP_DIR
+cd $TMP_DIR
+
+if command -v yay >/dev/null 2>&1; then
+  info "'yay' is already installed."
+else
+  info "Installing 'yay'."
+
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay
+  makepkg -si
+
+  rm -rf "$TMP_DIR/yay-bin"
+  info "'yay instalado"
+fi
