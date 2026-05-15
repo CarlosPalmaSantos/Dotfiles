@@ -90,6 +90,7 @@ fi
 # ZSH plugins
 install_zsh_plugin "zsh-autosuggestions"     "https://github.com/zsh-users/zsh-autosuggestions"
 install_zsh_plugin "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting"
+install_zsh_plugin "fzf-tab" "https://github.com/aloxaf/fzf-tab"
 
 # ─── Apps ────────────────────────────────────────────────────────────────────
 install_pkg neovim
