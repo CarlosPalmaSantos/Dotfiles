@@ -68,7 +68,7 @@ install_pkg stow
 
 # ─── ZSH ─────────────────────────────────────────────────────────────────────
 install_pkg zsh
-
+install_pkg fzf
 # Change default shell to zsh
 if [ "$SHELL" = "/usr/bin/zsh" ] || [ "$SHELL" = "/bin/zsh" ]; then
     warn "Zsh is already your default shell."
@@ -77,6 +77,8 @@ else
     chsh -s "$(command -v zsh)"
     info "Default shell changed to zsh."
 fi
+
+echo "export ZDOTDIR=$HOME/.config/zsh" >> ~/.zshenv
 
 # Oh My Zsh
 if [ -d "$HOME/.oh-my-zsh" ]; then
